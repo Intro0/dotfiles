@@ -1,0 +1,31 @@
+---
+"editor_view:cut_word_right": none
+"code_view:close_all_tabs": none
+"input:open_completion_suggestions": ctrl-space
+"terminal:executing_command_delete_word_left": none
+"pane_group:navigate_down": shift-cmd-J
+"terminal:executing_command_delete_line_end": none
+"editor_view:cursor_at_buffer_end": none
+"editor:delete_word_left": none
+"project_buttons:create_new_project": none
+"terminal:scroll_up_one_line": cmd-k
+"terminal:scroll_down_one_line": cmd-j
+"pane_group:navigate_right": shift-cmd-L
+"editor_view:cut_word_left": none
+Close Env Var Collection: none
+"editor_view:delete_all_right": none
+"editor_view:insert_autosuggestion": tab
+"editor_view:cut_all_right": none
+"terminal:clear_blocks": none
+"editor:delete_word_right": none
+"editor_view:clear_lines": none
+"welcome_view:open_project": none
+"editor:edit_link": none
+"editor_view:deselect_command": none
+"pane_group:navigate_left": shift-cmd-H
+"editor_view:cursor_at_buffer_start": none
+Close Workflow: none
+"pane_group:navigate_up": shift-cmd-K
+"terminal:executing_command_delete_line_start": none
+"ai_assistant_panel:reset_context": none
+"editor_view:delete_all_left": none

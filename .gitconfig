@@ -1,0 +1,10 @@
+[user]
+	name = Kenny Ngueyn
+	email = kennytrung0603@icloud.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	excludesfile = /Users/kennynguyen/.gitignore_global
+	editor = code --wait

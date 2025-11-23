@@ -1,0 +1,174 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "enable_language_server": true,
+  "linked_edits": true,
+  "show_wrap_guides": true,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "agent": {
+    "button": false,
+    "model_parameters": []
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "button": true
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "active_pane_modifiers": {
+    "border_size": 0.0,
+    "inactive_opacity": 1.0
+  },
+  "centered_layout": {
+    "left_padding": 0.2
+  },
+  "bottom_dock_layout": "left_aligned",
+  "preview_tabs": {
+    "enabled": true
+  },
+  "tabs": {
+    "show_close_button": "hover",
+    "show_diagnostics": "off",
+    "file_icons": false,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_sign_in": false,
+    "show_user_picture": false,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": true
+  },
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "lsp_pull_diagnostics": {
+      "enabled": true
+    },
+    "button": false
+  },
+  "status_bar": {
+    "cursor_position_button": false,
+    "active_language_button": false
+  },
+  "project_panel": {
+    "hide_hidden": false,
+    "hide_root": false,
+    "indent_guides": {
+      "show": "always"
+    },
+    "scrollbar": {
+      "show": "never"
+    },
+    "auto_fold_dirs": true,
+    "starts_open": false,
+    "auto_reveal_entries": true,
+    "indent_size": 15.0,
+    "git_status": true,
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "standard",
+    "hide_gitignore": false,
+    "default_width": 240.0,
+    "dock": "left",
+    "button": false
+  },
+  "rounded_selection": true,
+  "current_line_highlight": "all",
+  "ssh_connections": [
+    {
+      "host": "019a6b2b-ecc7-7758-9220-206b07a318b5.gitpod.environment",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/workspaces"
+          ]
+        }
+      ]
+    }
+  ],
+  "terminal": {
+    "default_height": 300,
+    "scrollbar": {
+      "show": "never"
+    },
+    "dock": "bottom",
+    "button": false,
+    "font_family": "MesloLGSDZ Nerd Font Mono",
+    "shell": "system"
+  },
+  "prettier": {
+    "allowed": false
+  },
+  "inlay_hints": {
+    "show_value_hints": true,
+    "enabled": false
+  },
+  "toolbar": {
+    "agent_review": false,
+    "code_actions": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": true
+  },
+  "minimap": {
+    "thumb": "always",
+    "show": "never"
+  },
+  "scrollbar": {
+    "show": "always",
+    "axes": {
+      "vertical": true,
+      "horizontal": true
+    }
+  },
+  "inline_code_actions": true,
+  "gutter": {
+    "min_line_number_digits": 4,
+    "line_numbers": true,
+    "folds": true,
+    "breakpoints": true,
+    "runnables": true
+  },
+  "relative_line_numbers": true,
+  "ui_font_weight": 400.0,
+  "ui_font_family": "JetBrains Mono",
+  "agent_servers": {
+    "your_agent": {
+      "command": "path_to_executable",
+      "args": [],
+      "env": {}
+    }
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "vim_mode": true,
+  "base_keymap": "Cursor",
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15,
+  "theme": "One Dark Pro"
+}
