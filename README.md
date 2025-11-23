@@ -37,7 +37,7 @@ Personal macOS development environment configuration files.
 
 ```bash
 # Clone this repository
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+git clone https://github.com/Intro0/dotfiles.git ~/dotfiles
 
 # Run the installation script
 cd ~/dotfiles
@@ -103,7 +103,7 @@ git push
 When setting up a new Mac:
 
 1. Install Xcode Command Line Tools: `xcode-select --install`
-2. Clone this repo: `git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles`
+2. Clone this repo: `git clone https://github.com/Intro0/dotfiles.git ~/dotfiles`
 3. Run install script: `cd ~/dotfiles && ./install.sh`
 4. Install Homebrew and restore packages (see Brewfile if you create one)
 5. Configure system preferences and install applications
