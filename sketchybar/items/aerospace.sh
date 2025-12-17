@@ -7,6 +7,15 @@ FOREGROUND=0xffffffff       # White for better contrast on blue
 FOREGROUND_INACTIVE=0xffabb2bf
 ACCENT=0xff61afef
 
+# Wait for aerospace to be ready on startup
+# This prevents race condition where sketchybar starts before aerospace
+MAX_RETRIES=30
+RETRY_COUNT=0
+while ! aerospace list-workspaces --all &>/dev/null && [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+    sleep 0.5
+    RETRY_COUNT=$((RETRY_COUNT + 1))
+done
+
 ALL_WORKSPACES=$(aerospace list-workspaces --all)
 
 for sid in $ALL_WORKSPACES; do
@@ -41,4 +50,11 @@ for sid in $ALL_WORKSPACES; do
       icon.font="CaskaydiaCove Nerd Font Mono:Regular:20.0" \
       label.drawing=off
   fi
+done
+
+# Force update all workspace icons after initialization
+# This ensures workspaces show correct app icons on startup
+sleep 1
+for sid in $ALL_WORKSPACES; do
+  $CONFIG_DIR/plugins/aerospace.sh $sid
 done

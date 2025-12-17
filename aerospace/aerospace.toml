@@ -9,18 +9,32 @@ enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 # Layout settings
-accordion-padding = 20
-default-root-container-layout = 'tiles'
-default-root-container-orientation = 'auto'
+accordion-padding = 0
+default-root-container-layout = 'accordion'
+default-root-container-orientation = 'vertical'
 
 # Unhide apps automatically
 automatically-unhide-macos-hidden-apps = false
 
+# Move mouse to focused monitor on workspace switch
+on-focus-changed = ['move-mouse monitor-lazy-center']
+
+# Trigger sketchybar update after aerospace starts to ensure all workspace icons load
+after-startup-command = [
+    'exec-and-forget /bin/bash -c "sleep 3 && for ws in $(aerospace list-workspaces --all); do sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused) NAME=space.$ws; done"'
+]
+
 # Workspaces:
-# 1 = Browser
-# 2 = Coding (Zed, Warp)
-# 3 = Communication (Discord, Spotify)
-persistent-workspaces = ["1", "2", "3"]
+# 1 = Browser (main monitor)
+# 2 = Coding (main monitor)
+# 3 = Communication (secondary/laptop when docked)
+
+# Assign workspaces to monitors
+# Monitor 1 = main/external, Monitor 2 = built-in/laptop
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'secondary'
 
 # Sketchybar integration - notify on workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
@@ -42,10 +56,11 @@ outer.right = 20
 # Main keybindings
 [mode.main.binding]
 # Focus windows (vim-style with hyper key)
-ctrl-alt-shift-cmd-h = 'focus left'
-ctrl-alt-shift-cmd-j = 'focus down'
-ctrl-alt-shift-cmd-k = 'focus up'
-ctrl-alt-shift-cmd-l = 'focus right'
+# Using wrap-around for infinite cycling in accordion layout
+ctrl-alt-shift-cmd-h = 'focus --boundaries-action wrap-around-the-workspace left'
+ctrl-alt-shift-cmd-j = 'focus --boundaries-action wrap-around-the-workspace down'
+ctrl-alt-shift-cmd-k = 'focus --boundaries-action wrap-around-the-workspace up'
+ctrl-alt-shift-cmd-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # Move windows
 alt-shift-h = 'move left'
@@ -66,7 +81,7 @@ alt-shift-3 = 'move-node-to-workspace 3'
 # Layout controls
 alt-f = 'fullscreen'
 alt-shift-f = 'layout floating tiling'
-alt-e = 'layout tiles horizontal vertical'
+alt-e = 'layout tiles vertical horizontal'
 alt-s = 'layout accordion vertical horizontal'
 
 # Resize mode
@@ -135,4 +150,8 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.FaceTime'
 run = 'layout floating'

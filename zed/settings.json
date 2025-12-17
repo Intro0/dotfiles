@@ -56,7 +56,7 @@
     "show_user_picture": false,
     "show_onboarding_banner": false,
     "show_project_items": false,
-    "show_branch_name": true
+    "show_branch_name": false
   },
   "debugger": {
     "button": false
@@ -154,11 +154,12 @@
     "breakpoints": true,
     "runnables": true
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "ui_font_weight": 400.0,
   "ui_font_family": "JetBrains Mono",
   "agent_servers": {
     "your_agent": {
+      "type": "custom",
       "command": "path_to_executable",
       "args": [],
       "env": {}
@@ -170,5 +171,41 @@
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 15.0,
   "buffer_font_size": 15,
-  "theme": "One Dark Pro"
+  "theme": "One Dark",
+  "experimental.theme_overrides": {
+    "background.appearance": "blurred",
+    "background": "#282c34bb",
+    "editor.background": "#00000000",
+    "editor.active_line.background": "#ffffff12",
+    "editor.highlighted_line.background": "#ffffff12",
+    "editor.gutter.background": "#00000000",
+    "panel.background": "#00000000",
+    "tab_bar.background": "#00000000",
+    "tab.active_background": "#ffffff18",
+    "tab.inactive_background": "#00000000",
+    "terminal.background": "#00000000",
+    "toolbar.background": "#00000000",
+    "status_bar.background": "#00000000",
+    "title_bar.background": "#00000000",
+    "title_bar.inactive_background": "#00000000",
+    "scrollbar.track.background": "#00000000",
+    "scrollbar.thumb.background": "#5c637044",
+    "surface.background": "#00000000",
+    "elevated_surface.background": "#21252bcc",
+    "element.background": "#00000000",
+    "element.hover": "#2c313a55",
+    "element.active": "#2c313a66",
+    "element.selected": "#ffffff18",
+    "ghost_element.background": "#00000000",
+    "ghost_element.hover": "#2c313a44",
+    "ghost_element.active": "#2c313a55",
+    "ghost_element.selected": "#2c313a55",
+    "drop_target.background": "#52829966",
+    "border": "#00000000",
+    "border.variant": "#181a1f44",
+    "border.focused": "#52829988",
+    "border.selected": "#52829988",
+    "border.transparent": "#00000000",
+    "pane.focused_border": "#00000000"
+  }
 }
